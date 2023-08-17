@@ -9,6 +9,7 @@
     ./programs/nginx.nix
     ./programs/bash.nix
     ./programs/acme.nix
+    ./programs/postgres.nix
   ];
 
   # Enable flakes
