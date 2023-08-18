@@ -8,6 +8,10 @@
     recommendedProxySettings = true;
 
     virtualHosts = {
+      "nc.comfycamp.space" = {
+        useACMEHost = "comfycamp.space";
+        forceSSL = true;
+      };
       "m.comfycamp.space" = {
         useACMEHost = "comfycamp.space";
         forceSSL = true;
