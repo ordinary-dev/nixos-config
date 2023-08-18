@@ -12,4 +12,10 @@
     isNormalUser = true;
     extraGroups = [ "acme" ];
   };
+
+  users.groups = {
+    mastodon = {
+      members = [ "nginx" ];
+    };
+  };
 }
