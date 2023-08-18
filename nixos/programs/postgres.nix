@@ -4,6 +4,17 @@
     enable = true;
     package = pkgs.postgresql_15;
     ensureDatabases = [ "mastodon" "synapse" "nextcloud" ];
+    ensureUsers = [
+      {
+        name = "mastodon";
+        ensurePermissions = {
+          "DATABASE mastodon" = "ALL PRIVILEGES";
+        };
+        ensureClauses = {
+          login = true;
+        };
+      }
+    ];
     identMap = ''
        # ArbitraryMapName systemUser DBUser
        superuser_map      root       postgres

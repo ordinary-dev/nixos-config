@@ -10,6 +10,8 @@
     ./programs/bash.nix
     ./programs/acme.nix
     ./programs/postgres.nix
+    ./programs/mastodon.nix
+    ./programs/redis.nix
   ];
 
   # Enable flakes
@@ -33,6 +35,7 @@
     iptables
     cryptsetup
     ffmpeg
+    file
   ];
 
   # Enable the OpenSSH daemon.
