@@ -9,7 +9,7 @@
       dbtype = "pgsql";
       dbname = "nextcloud";
       dbuser = "nextcloud";
-      dbhost = "/run/postgres";
+      dbhost = "/run/postgresql";
       overwriteProtocol = "https";
       defaultPhoneRegion = "RU";
       adminuser = "lumin";
