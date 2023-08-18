@@ -13,6 +13,7 @@
     ./programs/mastodon.nix
     ./programs/redis.nix
     ./programs/nextcloud.nix
+    ./programs/jellyfin.nix
   ];
 
   # Enable flakes
