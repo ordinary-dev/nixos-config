@@ -14,6 +14,15 @@
           login = true;
         };
       }
+      {
+        name = "nextcloud";
+        ensurePermissions = {
+          "DATABASE nextcloud" = "ALL PRIVILEGES";
+        };
+        ensureClauses = {
+          login = true;
+        };
+      }
     ];
     identMap = ''
        # ArbitraryMapName systemUser DBUser
