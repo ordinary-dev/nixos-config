@@ -13,7 +13,7 @@
       extraGroups = [ "acme" ];
     };
     nextcloud = {
-      isNormalUser = true;
+      isSystemUser = true;
       group = "nextcloud";
     };
   };

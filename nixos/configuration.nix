@@ -12,6 +12,7 @@
     ./programs/postgres.nix
     ./programs/mastodon.nix
     ./programs/redis.nix
+    ./programs/nextcloud.nix
   ];
 
   # Enable flakes
