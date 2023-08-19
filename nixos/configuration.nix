@@ -16,6 +16,7 @@
     ./programs/jellyfin.nix
     ./programs/mysql.nix
     ./programs/photoprism.nix
+    ./programs/synapse.nix
   ];
 
   # Enable flakes
