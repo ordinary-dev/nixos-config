@@ -53,3 +53,16 @@ registration_shared_secret: xxx
 macaroon_secret_key: xxx
 form_secret: xxx
 ```
+
+## Mail
+
+- /var/lib/mta-sts/.well-known/mta-sts.txt
+
+```
+version: STSv1
+mode: enforce
+max_age: 604800
+mx: mx.comfycamp.space
+```
+
+The file must be available to the `nginx` user.

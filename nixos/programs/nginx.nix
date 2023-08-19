@@ -40,10 +40,14 @@ in {
         # https://spec.matrix.org/latest/client-server-api/#getwell-knownmatrixclient
         locations."= /.well-known/matrix/client".extraConfig = mkWellKnown clientConfig;
       };
+
+      # Nextcloud
       "nc.comfycamp.space" = {
         useACMEHost = "comfycamp.space";
         forceSSL = true;
       };
+
+      # Jellyfin
       "jf.comfycamp.space" = {
         useACMEHost = "comfycamp.space";
         forceSSL = true;
@@ -53,6 +57,14 @@ in {
           };
         };
       };
+
+      # Mail: MTA-STS
+      "mta-sts.comfycamp.space" = {
+        useACMEHost = "comfycamp.space";
+        forceSSL = true;
+        root = "/var/lib/mta-sts";
+      };
+
       "matrix.comfycamp.space" = {
         useACMEHost = "comfycamp.space";
         forceSSL = true;
@@ -67,6 +79,8 @@ in {
           "/_synapse/client".proxyPass = "http://127.0.0.1:8008";
         };
       };
+
+      # Photoprism
       "pp.comfycamp.space" = {
         useACMEHost = "comfycamp.space";
         forceSSL = true;
@@ -77,6 +91,8 @@ in {
           };
         };
       };
+
+      # Mastodon
       "m.comfycamp.space" = {
         useACMEHost = "comfycamp.space";
         forceSSL = true;
