@@ -18,6 +18,8 @@
     ./programs/synapse.nix
     ./programs/fail2ban.nix
     ./programs/maddy.nix
+    ./programs/plausible.nix
+    ./programs/clickhouse.nix
   ];
 
   # Enable flakes

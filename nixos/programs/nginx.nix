@@ -58,6 +58,17 @@ in {
         };
       };
 
+      # Plausible
+      "plausible.comfycamp.space" = {
+        useACMEHost = "comfycamp.space";
+        forceSSL = true;
+        locations = {
+          "/" = {
+            proxyPass = "http://127.0.0.1:55005";
+          };
+        };
+      };
+
       # Mail: MTA-STS
       "mta-sts.comfycamp.space" = {
         useACMEHost = "comfycamp.space";
