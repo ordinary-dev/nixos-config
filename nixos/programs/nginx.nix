@@ -36,6 +36,7 @@
         locations = {
           "/" = {
             proxyPass = "http://127.0.0.1:55004";
+            proxyWebsockets = true;
           };
         };
       };
