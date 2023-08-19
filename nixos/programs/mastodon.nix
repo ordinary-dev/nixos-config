@@ -33,6 +33,12 @@
       olderThanDays = 14;
     };
 
+    extraConfig = {
+      SMTP_SSL = "true";
+      SMTP_ENABLE_STARTTLS_AUTO = "false";
+      SMTP_AUTH_METHOD = "plain";
+    };
+
     smtp = {
       host = "comfycamp.space";
       user = "mastodon@comfycamp.space";
