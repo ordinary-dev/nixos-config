@@ -16,6 +16,10 @@
       isSystemUser = true;
       group = "nextcloud";
     };
+    photoprism = {
+      isSystemUser = true;
+      group = "photoprism";
+    };
   };
 
   users.groups = {
@@ -24,6 +28,9 @@
     };
     nextcloud = {
       members = [ "nextcloud" config.services.nginx.user ];
+    };
+    photoprism = {
+      members = [ "photoprism" config.services.nginx.user ];
     };
   };
 }
