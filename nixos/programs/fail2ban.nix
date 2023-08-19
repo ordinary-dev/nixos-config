@@ -1,10 +1,10 @@
 { config, ... }:
 {
   services.fail2ban = {
-    enable = false;
+    enable = true;
     maxretry = 5;
     ignoreIP = [
-      "192.168.88.0/24"
+      "192.168.0.0/24"
     ];
   };
 }

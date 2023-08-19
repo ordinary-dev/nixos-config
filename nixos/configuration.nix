@@ -4,7 +4,6 @@
     ./hardware-configuration.nix
     ./networking.nix
     ./users.nix
-    ./fail2ban.nix
     ./time.nix
     ./programs/nginx.nix
     ./programs/bash.nix
@@ -17,6 +16,7 @@
     ./programs/mysql.nix
     ./programs/photoprism.nix
     ./programs/synapse.nix
+    ./programs/fail2ban.nix
   ];
 
   # Enable flakes
