@@ -14,6 +14,7 @@
     ./programs/redis.nix
     ./programs/nextcloud.nix
     ./programs/jellyfin.nix
+    ./programs/mysql.nix
   ];
 
   # Enable flakes
