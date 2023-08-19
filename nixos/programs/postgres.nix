@@ -3,7 +3,7 @@
   config.services.postgresql = {
     enable = true;
     package = pkgs.postgresql_15;
-    ensureDatabases = [ "mastodon" "matrix-synapse" "nextcloud" "maddy" ];
+    ensureDatabases = [ "mastodon" "matrix-synapse" "nextcloud" "maddy" "plausible" ];
     ensureUsers = [
       {
         name = "mastodon";
@@ -33,12 +33,20 @@
         };
         ensureClauses.login = true;
       }
+      {
+        name = "plausible";
+        ensurePermissions = {
+          "DATABASE plausible" = "ALL PRIVILEGES";
+        };
+        ensureClauses.login = true;
+      }
     ];
     initialScript = pkgs.writeText "pg-init.sql" ''
       ALTER DATABASE nextcloud OWNER TO nextcloud;
       ALTER DATABASE mastodon OWNER TO mastodon;
       ALTER DATABASE "matrix-synapse" OWNER TO "matrix-synapse";
       ALTER DATABASE maddy OWNER TO maddy;
+      ALTER DATABASE plausible OWNER TO plausible;
     '';
     identMap = ''
        # ArbitraryMapName systemUser DBUser
