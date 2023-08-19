@@ -17,6 +17,8 @@ sudo nixos-rebuild --flake .#comfycamp switch
 | Jellyfin   | Private                                        |
 | Photoprism | Private                                        |
 | Nextcloud  | Private                                        |
+| Maddy      | Private                                        |
+| Plausible  | Private                                        |
 
 ## Required files
 
@@ -31,6 +33,7 @@ REGRU_PASSWORD=xxx
 
 The file must be available to the `acme` user.
 
+
 ### Mastodon
 
 - /var/lib/mastodon/otp-secret.txt
@@ -40,9 +43,11 @@ The file must be available to the `acme` user.
 - /var/lib/mastodon/vapid-private-key.txt
 - /var/lib/mastodon/vapid-public-key.txt
 
+
 ### Nextcloud
 
 - /var/lib/nextcloud/admin-pass.txt
+
 
 ### Synapse
 
@@ -54,7 +59,8 @@ macaroon_secret_key: xxx
 form_secret: xxx
 ```
 
-## Mail
+
+### Mail
 
 - /var/lib/mta-sts/.well-known/mta-sts.txt
 
@@ -66,3 +72,11 @@ mx: mx.comfycamp.space
 ```
 
 The file must be available to the `nginx` user.
+
+
+### Plausible
+
+- /var/lib/secrets/plausible/admin-pass.txt
+- /var/lib/secrets/plausible/keybase.txt
+- /var/lib/secrets/plausible/release-cookie.txt
+- /var/lib/secrets/plausible/smtp-pass.txt
