@@ -13,6 +13,16 @@
           <logger>
             <level>warning</level>
           </logger>
+
+          <!-- Stop all the unnecessary logging -->
+          <query_thread_log remove="remove"/>
+          <query_log remove="remove"/>
+          <text_log remove="remove"/>
+          <trace_log remove="remove"/>
+          <metric_log remove="remove"/>
+          <asynchronous_metric_log remove="remove"/>
+          <session_log remove="remove"/>
+          <part_log remove="remove"/>
         </clickhouse>
       '';
     };
