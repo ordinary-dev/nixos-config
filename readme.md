@@ -8,6 +8,16 @@ My home server settings.
 sudo nixos-rebuild --flake .#comfycamp switch
 ```
 
+## Services
+
+| Name       | Url                                            |
+| ---        | ---                                            |
+| Mastodon   | [m.comfycamp.space](https://m.comfycamp.space) |
+| Synapse    | matrix.comfycamp.space                         |
+| Jellyfin   | Private                                        |
+| Photoprism | Private                                        |
+| Nextcloud  | Private                                        |
+
 ## Required files
 
 ### Acme
