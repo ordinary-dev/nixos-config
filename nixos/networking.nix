@@ -9,8 +9,16 @@
 
     firewall = {
       enable = true;
-      # SSH, nginx
-      allowedTCPPorts = [ 22 80 443 ];
+      allowedTCPPorts = [
+        22    # SSH
+        80    # nginx
+        443   # nginx
+        25    # smtp inbound
+        465   # smtp submission
+        587   # smtp submission
+        143   # imap
+        993   # imap
+      ];
       # Jellyfin
       allowedUDPPorts = [ 1900 7359 ];
     };
