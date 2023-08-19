@@ -20,6 +20,10 @@
       isSystemUser = true;
       group = "photoprism";
     };
+    matrix-synapse = {
+      isSystemUser = true;
+      group = "matrix-synapse";
+    };
   };
 
   users.groups = {
@@ -31,6 +35,9 @@
     };
     photoprism = {
       members = [ "photoprism" config.services.nginx.user ];
+    };
+    matrix-synapse = {
+      members = [ "matrix-synapse" config.services.nginx.user ];
     };
   };
 }

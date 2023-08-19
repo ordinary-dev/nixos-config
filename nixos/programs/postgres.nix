@@ -3,27 +3,35 @@
   config.services.postgresql = {
     enable = true;
     package = pkgs.postgresql_15;
-    ensureDatabases = [ "mastodon" "synapse" "nextcloud" ];
+    ensureDatabases = [ "mastodon" "matrix-synapse" "nextcloud" ];
     ensureUsers = [
       {
         name = "mastodon";
         ensurePermissions = {
           "DATABASE mastodon" = "ALL PRIVILEGES";
         };
-        ensureClauses = {
-          login = true;
-        };
+        ensureClauses.login = true;
       }
       {
         name = "nextcloud";
         ensurePermissions = {
           "DATABASE nextcloud" = "ALL PRIVILEGES";
         };
-        ensureClauses = {
-          login = true;
+        ensureClauses.login = true;
+      }
+      {
+        name = "matrix-synapse";
+        ensurePermissions = {
+          "DATABASE \"matrix-synapse\"" = "ALL PRIVILEGES";
         };
+        ensureClauses.login = true;
       }
     ];
+    initialScript = pkgs.writeText "pg-init.sql" ''
+      ALTER DATABASE nextcloud OWNER TO nextcloud;
+      ALTER DATABASE mastodon OWNER TO mastodon;
+      ALTER DATABASE "matrix-synapse" OWNER TO "matrix-synapse";
+    '';
     identMap = ''
        # ArbitraryMapName systemUser DBUser
        superuser_map      root       postgres
