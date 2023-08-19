@@ -43,4 +43,11 @@
       authenticate = true;
     };
   };
+
+  systemd.services.mastodon-web = {
+    serviceConfig.ReadWritePaths = "/hdd/mastodon-public-system";
+  };
+  systemd.services.mastodon-sidekiq-all = {
+    serviceConfig.ReadWritePaths = "/hdd/mastodon-public-system";
+  };
 }
