@@ -17,6 +17,7 @@
     ./programs/photoprism.nix
     ./programs/synapse.nix
     ./programs/fail2ban.nix
+    ./programs/maddy.nix
   ];
 
   # Enable flakes
