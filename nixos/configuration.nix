@@ -15,6 +15,7 @@
     ./programs/nextcloud.nix
     ./programs/jellyfin.nix
     ./programs/mysql.nix
+    ./programs/photoprism.nix
   ];
 
   # Enable flakes
