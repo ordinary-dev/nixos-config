@@ -8,13 +8,11 @@
     nameservers = [ "1.1.1.1" ];
 
     firewall = {
-      # TODO: enable me
-      enable = false;
-      allowedTCPPorts = [ 22 80 443 1900 7359 30000 30025 30465 30993 ];
-      allowedUDPPorts = [ 30000 1900 7359 ];
-
-      # Kubernetes
-      trustedInterfaces = [ "lo" "flannel.1" "cni0" ];
+      enable = true;
+      # SSH, nginx
+      allowedTCPPorts = [ 22 80 443 ];
+      # Jellyfin
+      allowedUDPPorts = [ 1900 7359 ];
     };
 
     wireless.enable = false;
