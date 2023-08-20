@@ -29,14 +29,19 @@
       isSystemUser = true;
       group = "plausible";
     };
+    microboard = {
+      isSystemUser = true;
+      group = "microboard";
+    };
   };
 
   users.groups = {
     mastodon.members = [ "mastodon" config.services.nginx.user ];
     nextcloud.members = [ "nextcloud" config.services.nginx.user ];
-    photoprism.members = [ "photoprism" config.services.nginx.user ];
-    matrix-synapse.members = [ "matrix-synapse" config.services.nginx.user ];
-    maddy.members = [ "maddy" ];
-    plausible.members = [ "plausible" ];
+    photoprism = {};
+    matrix-synapse = {};
+    maddy = {};
+    plausible = {};
+    microboard = {};
   };
 }
