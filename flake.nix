@@ -5,9 +5,14 @@
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixos-23.05";
     };
+
+    microboard = {
+      url = "github:ordinary-dev/microboard";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs }:
+  outputs = inputs @ { self, nixpkgs, ... }:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
