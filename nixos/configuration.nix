@@ -47,6 +47,7 @@
     file
     vips
     go
+    pkg-config
   ];
 
   # Enable the OpenSSH daemon.
