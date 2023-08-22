@@ -23,6 +23,7 @@ in {
           https   "max-age=31536000; includeSubdomains; preload";
       }
       add_header Strict-Transport-Security $hsts_header;
+      access_log off;
     '';
 
     virtualHosts = {
