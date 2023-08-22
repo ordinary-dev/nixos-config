@@ -6,11 +6,12 @@ in
   virtualisation.oci-containers.containers.microboard = {
     autoStart = true;
     image = "ghcr.io/ordinary-dev/microboard:v0.0.4";
-    environmentFiles = "/var/lib/microboard/.env";
-    ports = ["55006:8080"];
-    user = "microboard:microboard";
+    ports = ["55006:8000"];
+    user = "986:983";
     volumes = [
-      "/var/lib/microboard:/app"
+      "/hdd/microboard/.env:/app/.env"
+      "/hdd/microboard/uploads:/app/uploads"
+      "/hdd/microboard/previews:/app/previews"
       "/run/postgresql:/run/postgresql"
     ];
   };
