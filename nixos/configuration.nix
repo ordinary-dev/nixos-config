@@ -46,6 +46,7 @@
     ffmpeg
     file
     vips
+    go
   ];
 
   # Enable the OpenSSH daemon.
