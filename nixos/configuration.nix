@@ -45,6 +45,7 @@
     cryptsetup
     ffmpeg
     file
+    vips
   ];
 
   # Enable the OpenSSH daemon.
