@@ -68,6 +68,17 @@ in {
           };
         };
       };
+      
+      # Microboard
+      "0ch.space" = {
+        useACMEHost = "0ch.space";
+        forceSSL = true;
+        locations = {
+          "/" = {
+            proxyPass = "http://127.0.0.1:55006";
+          };
+        };
+      };
 
       # Mail: MTA-STS
       "mta-sts.comfycamp.space" = {

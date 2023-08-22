@@ -3,34 +3,15 @@ let
   dataDir = "/var/lib/microboard";
 in
 {
-  systemd.services.microboard = {
-    description = "Microboard engine";
-    wantedBy = ["multi-user.target"];
-
-    environment = {
-      MB_LOGLEVEL = "warning";
-      MB_UPLOADDIR = "${ dataDir }/uploads";
-      MB_PREVIEWDIR = "${ dataDir }/previews";
-      MB_DBHOST = "/run/postgresql";
-      MB_DBUSER = "microboard";
-      MB_DBNAME = "microboard";
-    };
-
-    serviceConfig = {
-      User = "microboard";
-      Group = "microboard";
-      ExecStart = "${ dataDir }/microboard";
-      Restart = "on-failure";
-      Type = "exec";
-      WorkingDirectory = dataDir;
-
-      # Security Hardening
-      LockPersonality = true;
-      NoNewPrivileges = true;
-      ProtectSystem = "strict";
-      ReadWritePaths = [ dataDir ];
-      RestrictAddressFamilies = [ "AF_INET" "AF_INET6" "AF_UNIX" ];
-      RestrictSUIDSGID = true;
-    };
+  virtualisation.oci-containers.containers.microboard = {
+    autoStart = true;
+    image = "ghcr.io/ordinary-dev/microboard:v0.0.4";
+    environmentFiles = "/var/lib/microboard/.env";
+    ports = ["55006:8080"];
+    user = "microboard:microboard";
+    volumes = [
+      "/var/lib/microboard:/app"
+      "/run/postgresql:/run/postgresql"
+    ];
   };
 }

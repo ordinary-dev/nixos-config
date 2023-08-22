@@ -20,6 +20,7 @@
     ./programs/maddy.nix
     ./programs/plausible.nix
     ./programs/clickhouse.nix
+    ./programs/docker.nix
     ./programs/microboard.nix
   ];
 
