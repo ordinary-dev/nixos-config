@@ -5,11 +5,6 @@
     nixpkgs = {
       url = "github:NixOS/nixpkgs/nixos-23.05";
     };
-
-    microboard = {
-      url = "github:ordinary-dev/microboard";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs @ { self, nixpkgs, ... }:
