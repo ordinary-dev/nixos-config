@@ -33,6 +33,10 @@
       isSystemUser = true;
       group = "microboard";
     };
+    freshrss = {
+      isSystemUser = true;
+      group = "freshrss";
+    };
   };
 
   users.groups = {
@@ -43,5 +47,6 @@
     maddy = {};
     plausible = {};
     microboard = {};
+    freshrss = {};
   };
 }
