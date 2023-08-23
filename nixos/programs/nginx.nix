@@ -115,6 +115,12 @@ in {
         };
       };
 
+      # Freshrss
+      "freshrss.comfycamp.space" = {
+        useACMEHost = "comfycamp.space";
+        forceSSL = true;
+      };
+
       # Mastodon
       "m.comfycamp.space" = {
         useACMEHost = "comfycamp.space";

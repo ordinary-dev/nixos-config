@@ -22,6 +22,7 @@
     ./programs/clickhouse.nix
     ./programs/docker.nix
     ./programs/microboard.nix
+    ./programs/freshrss.nix
   ];
 
   # Enable flakes
