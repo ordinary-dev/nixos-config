@@ -5,7 +5,7 @@ in
 {
   virtualisation.oci-containers.containers.microboard = {
     autoStart = true;
-    image = "ghcr.io/ordinary-dev/microboard:v0.0.4";
+    image = "ghcr.io/ordinary-dev/microboard:v0.0.5";
     ports = ["55006:8000"];
     user = "986:983";
     volumes = [
