@@ -23,6 +23,7 @@
     ./programs/docker.nix
     ./programs/microboard.nix
     ./programs/freshrss.nix
+    ./programs/comfycamp.nix
   ];
 
   # Enable flakes

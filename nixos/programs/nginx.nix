@@ -30,16 +30,19 @@ in {
       "comfycamp.space" = {
         useACMEHost = "comfycamp.space";
         forceSSL = true;
-        # This section is not needed if the server_name of matrix-synapse is equal to
-        # the domain (i.e. example.org from @foo:example.org) and the federation port
-        # is 8448.
-        # Further reference can be found in the docs about delegation under
-        # https://matrix-org.github.io/synapse/latest/delegate.html
-        locations."= /.well-known/matrix/server".extraConfig = mkWellKnown serverConfig;
-        # This is usually needed for homeserver discovery (from e.g. other Matrix clients).
-        # Further reference can be found in the upstream docs at
-        # https://spec.matrix.org/latest/client-server-api/#getwell-knownmatrixclient
-        locations."= /.well-known/matrix/client".extraConfig = mkWellKnown clientConfig;
+        locations = {
+          "/".proxyPass = "http://127.0.0.1:55007";
+          # This section is not needed if the server_name of matrix-synapse is equal to
+          # the domain (i.e. example.org from @foo:example.org) and the federation port
+          # is 8448.
+          # Further reference can be found in the docs about delegation under
+          # https://matrix-org.github.io/synapse/latest/delegate.html
+          "/.well-known/matrix/server".extraConfig = mkWellKnown serverConfig;
+          # This is usually needed for homeserver discovery (from e.g. other Matrix clients).
+          # Further reference can be found in the upstream docs at
+          # https://spec.matrix.org/latest/client-server-api/#getwell-knownmatrixclient
+          "/.well-known/matrix/client".extraConfig = mkWellKnown clientConfig;
+        };
       };
 
       # Nextcloud
