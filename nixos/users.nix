@@ -37,6 +37,10 @@
       isSystemUser = true;
       group = "freshrss";
     };
+    phoenix = {
+      isSystemUser = true;
+      group = "phoenix";
+    };
   };
 
   users.groups = {
@@ -48,5 +52,6 @@
     plausible = {};
     microboard = {};
     freshrss = {};
+    phoenix = {};
   };
 }
