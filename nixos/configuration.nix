@@ -24,6 +24,7 @@
     ./programs/microboard.nix
     ./programs/freshrss.nix
     ./programs/comfycamp.nix
+    ./programs/phoenix.nix
   ];
 
   # Enable flakes
