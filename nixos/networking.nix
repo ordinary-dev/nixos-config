@@ -18,9 +18,13 @@
         587   # smtp submission
         143   # imap
         993   # imap
+        6881  # torrents
       ];
-      # Jellyfin
-      allowedUDPPorts = [ 1900 7359 ];
+      allowedUDPPorts = [
+        1900  # jellyfin
+        7359  # jellyfin
+        6881  # torrents
+      ];
     };
 
     wireless.enable = false;
