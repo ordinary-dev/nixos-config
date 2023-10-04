@@ -25,6 +25,7 @@
     ./programs/freshrss.nix
     ./programs/comfycamp.nix
     ./programs/phoenix.nix
+    ./programs/deluge.nix
   ];
 
   # Enable flakes
@@ -52,6 +53,7 @@
     vips
     go
     pkg-config
+    deluged
   ];
 
   # Enable the OpenSSH daemon.
