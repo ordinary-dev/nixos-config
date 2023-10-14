@@ -12,6 +12,7 @@
           database = "matrix-synapse";
         };
       };
+      enable_registration = true;
       report_stats = true;
       listeners = [{
         bind_addresses = [ "127.0.0.1" ];
