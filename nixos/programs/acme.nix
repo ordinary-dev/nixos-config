@@ -19,11 +19,11 @@
         credentialsFile = "/var/lib/secrets/certs.txt";
       };
       "0ch.space" = {
-        dnsProvider = "regru";
+        dnsProvider = "cloudflare";
         domain = "0ch.space";
         extraDomainNames = [ "*.0ch.space" ];
         dnsPropagationCheck = true;
-        credentialsFile = "/var/lib/secrets/certs.txt";
+        credentialsFile = "/var/lib/secrets/cloudflare.txt";
       };
     };
   };
