@@ -1,10 +1,8 @@
 { config, ... }:
 {
   # Настройки сервиса для получения wildcard сертификатов.
-
-  # В /var/lib/secrets/certs.txt находится логин и пароль от reg.ru.
-  # REGRU_USERNAME=xxx
-  # REGRU_PASSWORD=xxx
+  # https://nixos.wiki/wiki/ACME
+  # https://go-acme.github.io/lego/dns/
 
   security.acme = {
     acceptTerms = true;
@@ -12,11 +10,11 @@
 
     certs = {
       "comfycamp.space" = {
-        dnsProvider = "regru";
+        dnsProvider = "cloudflare";
         domain = "comfycamp.space";
         extraDomainNames = [ "*.comfycamp.space" ];
         dnsPropagationCheck = true;
-        credentialsFile = "/var/lib/secrets/certs.txt";
+        credentialsFile = "/var/lib/secrets/cloudflare.txt";
       };
       "0ch.space" = {
         dnsProvider = "cloudflare";
