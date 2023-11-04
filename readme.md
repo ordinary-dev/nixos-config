@@ -22,14 +22,7 @@ sudo nixos-rebuild --flake .#comfycamp switch
 
 ## Required files
 
-### Acme
-
-- /var/lib/secrets/certs.txt:
-
-```bash
-REGRU_USERNAME=xxx
-REGRU_PASSWORD=xxx
-```
+- /var/lib/secrets/certs.txt
 
 The file must be available to the `acme` user.
 
