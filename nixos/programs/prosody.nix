@@ -26,5 +26,10 @@
         maxHistoryMessages = 512;
       }
     ];
+
+    allowRegistration = true;
+    admins = [
+      "lumin@xmpp.comfycamp.space"
+    ];
   };
 }
