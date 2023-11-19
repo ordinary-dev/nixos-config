@@ -26,6 +26,7 @@
     ./programs/comfycamp.nix
     ./programs/phoenix.nix
     ./programs/deluge.nix
+    ./programs/adguard.nix
   ];
 
   # Enable flakes
