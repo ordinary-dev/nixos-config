@@ -13,6 +13,11 @@
       group = "maddy";
       extraGroups = [ "acme" ];
     };
+    prosody = {
+      isSystemUser = true;
+      group = "prosody";
+      extraGroups = [ "acme" ];
+    };
     nextcloud = {
       isSystemUser = true;
       group = "nextcloud";
@@ -46,6 +51,7 @@
   users.groups = {
     mastodon.members = [ "mastodon" config.services.nginx.user ];
     nextcloud.members = [ "nextcloud" config.services.nginx.user ];
+    prosody = {};
     photoprism = {};
     matrix-synapse = {};
     maddy = {};

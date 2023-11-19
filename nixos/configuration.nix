@@ -27,6 +27,7 @@
     ./programs/phoenix.nix
     ./programs/deluge.nix
     ./programs/adguard.nix
+    ./programs/prosody.nix
   ];
 
   # Enable flakes
