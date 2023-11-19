@@ -19,6 +19,8 @@
         587   # smtp submission
         143   # imap
         993   # imap
+        5280  # prosody http
+        5281  # prosody https
         6881  # torrents
         55010 # adguard
       ];
