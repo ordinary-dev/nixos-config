@@ -1,6 +1,11 @@
-{ config, ...}: {
+{ config, pkgs, ...}: {
   services.prosody = {
     enable = true;
+  
+    package = pkgs.prosody.override {
+      withExtraLibs = [ pkgs.luajitPackages.luadbi ];
+    };
+
     virtualHosts."xmpp.comfycamp.space" = {
       enabled = true;
       domain = "xmpp.comfycamp.space";
