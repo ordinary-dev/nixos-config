@@ -31,5 +31,10 @@
     admins = [
       "lumin@xmpp.comfycamp.space"
     ];
+
+    extraConfig = ''
+      storage = "sql"
+      sql = { driver = "PostgreSQL", database = "prosody", username = "prosody", password = "", host = "/run/postgresql" }
+    '';
   };
 }
