@@ -64,5 +64,7 @@
     settings.PasswordAuthentication = false;
   };
 
+  powerManagement.powertop.enable = true;
+
   system.stateVersion = "22.11";
 }
