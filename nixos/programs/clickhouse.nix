@@ -1,7 +1,7 @@
 { config, ... }:
 {
   services.clickhouse = {
-    enable = true;
+    enable = false;
   };
 
   # See https://github.com/NixOS/nixpkgs/pull/186667

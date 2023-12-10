@@ -1,7 +1,7 @@
 { config, lib, ... }:
 {
   services.plausible = {
-    enable = true;
+    enable = false;
     database.postgres = {
       setup = false;
       dbname = "plausible";
