@@ -22,6 +22,8 @@
     streamingPort = 55002;
     sidekiqPort = 55003;
 
+    streamingProcesses = 11;
+
     vapidPrivateKeyFile = "/var/lib/secrets/mastodon/vapid-private-key.txt";
     vapidPublicKeyFile  = "/var/lib/secrets/mastodon/vapid-public-key.txt";
     secretKeyBaseFile   = "/var/lib/secrets/mastodon/secret-key-base.txt";
