@@ -19,7 +19,6 @@
 
     configureNginx = false;
     webPort = 55001;
-    streamingPort = 55002;
     sidekiqPort = 55003;
 
     streamingProcesses = 11;

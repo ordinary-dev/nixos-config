@@ -2,7 +2,6 @@
 {
   services.plausible = {
     enable = true;
-    releaseCookiePath = "/var/lib/secrets/plausible/release-cookie.txt";
     database.postgres = {
       setup = false;
       dbname = "plausible";
