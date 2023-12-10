@@ -31,18 +31,4 @@
       };
     };
   };
-
-  systemd.services.plausible.script = lib.mkForce ''
-    export CONFIG_DIR=$CREDENTIALS_DIRECTORY
-
-    export RELEASE_COOKIE="$(< $CREDENTIALS_DIRECTORY/RELEASE_COOKIE )"
-
-    # Do not create the database.
-    # https://github.com/plausible/analytics/issues/405
-    # ${config.services.plausible.package}/createdb.sh
-
-    ${config.services.plausible.package}/migrate.sh
-    
-    exec plausible start
-  '';
 }
