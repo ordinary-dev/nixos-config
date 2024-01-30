@@ -13,13 +13,9 @@
   boot.initrd.luks.devices = {
     hdd = {
       device = "/dev/disk/by-uuid/157d0eca-01bf-4dfc-88ff-12eb1e1aff69";
-      keyFileSize = 4096;
-      keyFile = "/dev/disk/by-id/usb-General_UDisk_2111031038384184595311-0:0";
     };
     ssd = {
       device = "/dev/disk/by-uuid/d13d7d84-5fa2-4b0f-abcc-5834c75b4cb6";
-      keyFileSize = 4096;
-      keyFile = "/dev/disk/by-id/usb-General_UDisk_2111031038384184595311-0:0";
     };
   };
   boot.kernelModules = [ "kvm-intel" ];
