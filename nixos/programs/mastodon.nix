@@ -38,6 +38,7 @@
       SMTP_SSL = "true";
       SMTP_ENABLE_STARTTLS_AUTO = "false";
       SMTP_AUTH_METHOD = "plain";
+      RAILS_LOG_LEVEL = "warn";
     };
 
     smtp = {
