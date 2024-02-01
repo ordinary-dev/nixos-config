@@ -27,6 +27,12 @@ in {
     '';
 
     virtualHosts = {
+      "[201:80ed:6eeb:aea4:cdc0:c836:2831:f2dd]" = {
+        locations = {
+          "/".proxyPass = "http://127.0.0.1:55007";
+        };
+      };
+
       "comfycamp.space" = {
         useACMEHost = "comfycamp.space";
         forceSSL = true;
