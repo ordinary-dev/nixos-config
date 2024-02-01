@@ -28,6 +28,7 @@
     ./programs/deluge.nix
     ./programs/adguard.nix
     ./programs/prosody.nix
+    ./programs/yggdrasil.nix
   ];
 
   # Enable flakes

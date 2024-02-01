@@ -22,6 +22,8 @@
         5280  # prosody http
         5281  # prosody https
         6881  # torrents
+        16001 # yggdrasil tcp
+        16002 # yggdrasil tls
         55010 # adguard
       ];
       allowedUDPPorts = [
