@@ -6,6 +6,9 @@
       withExtraLibs = [ pkgs.luajitPackages.luadbi ];
     };
 
+    httpPorts = [ 5280 ];
+    httpsPorts = [ 5281 ];
+
     virtualHosts."xmpp.comfycamp.space" = {
       enabled = true;
       domain = "xmpp.comfycamp.space";
