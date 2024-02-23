@@ -3,7 +3,9 @@
     enable = true;
   
     package = pkgs.prosody.override {
-      withExtraLibs = [ pkgs.luajitPackages.luadbi ];
+      withExtraLuaPackages = lua: [
+        lua.luadbi-postgresql
+      ];
     };
 
     httpPorts = [ 5280 ];
