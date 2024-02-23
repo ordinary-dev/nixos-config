@@ -3,8 +3,13 @@
     enable = true;
   
     package = pkgs.prosody.override {
-      withExtraLibs = [ pkgs.luajitPackages.luadbi ];
+      withExtraLuaPackages = lua: [
+        lua.luadbi-postgresql
+      ];
     };
+
+    httpPorts = [ 5280 ];
+    httpsPorts = [ 5281 ];
 
     virtualHosts."xmpp.comfycamp.space" = {
       enabled = true;
@@ -32,11 +37,12 @@
       }
     ];
 
-    allowRegistration = true;
+    allowRegistration = false;
     admins = [
       "lumin@xmpp.comfycamp.space"
     ];
 
+    extraModules = [ "mod_storage_sql" ];
     extraConfig = ''
       storage = "sql"
       sql = { driver = "PostgreSQL", database = "prosody", username = "prosody", password = "", host = "/run/postgresql" }

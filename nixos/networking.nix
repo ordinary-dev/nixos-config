@@ -19,8 +19,13 @@
         587   # smtp submission
         143   # imap
         993   # imap
-        5280  # prosody http
-        5281  # prosody https
+        
+        # Prosody
+        5000  # File transfer proxy
+        5222  # Client connections
+        5269  # Server-to-server connections
+        5281  # HTTPS
+
         6881  # torrents
         16001 # yggdrasil tcp
         16002 # yggdrasil tls
