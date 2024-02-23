@@ -42,7 +42,7 @@
       "lumin@xmpp.comfycamp.space"
     ];
 
-    extraModules = [ "storage_sql" "websocket" ];
+    extraModules = [ "websocket" ];
     extraConfig = ''
       external_addresses = { "62.16.41.235" }
       storage = "sql"
