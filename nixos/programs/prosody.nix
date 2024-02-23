@@ -40,6 +40,7 @@
       "lumin@xmpp.comfycamp.space"
     ];
 
+    extraModules = [ "mod_storage_sql" ];
     extraConfig = ''
       storage = "sql"
       sql = { driver = "PostgreSQL", database = "prosody", username = "prosody", password = "", host = "/run/postgresql" }
