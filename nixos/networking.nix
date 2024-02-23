@@ -23,7 +23,9 @@
         # Prosody
         5000  # File transfer proxy
         5222  # Client connections
+        5223  # Client connections - tls
         5269  # Server-to-server connections
+        5270  # Server-to-server connections - tls
         5281  # HTTPS
 
         6881  # torrents
