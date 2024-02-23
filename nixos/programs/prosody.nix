@@ -37,7 +37,7 @@
       }
     ];
 
-    allowRegistration = true;
+    allowRegistration = false;
     admins = [
       "lumin@xmpp.comfycamp.space"
     ];
