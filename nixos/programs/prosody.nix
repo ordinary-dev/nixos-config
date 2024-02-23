@@ -44,6 +44,7 @@
 
     extraModules = [ "storage_sql" "websocket" ];
     extraConfig = ''
+      external_addresses = { "62.16.41.235" }
       storage = "sql"
       sql = { driver = "PostgreSQL", database = "prosody", username = "prosody", password = "", host = "/run/postgresql" }
     '';
