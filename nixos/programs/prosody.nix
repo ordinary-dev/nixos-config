@@ -42,7 +42,7 @@
       "lumin@xmpp.comfycamp.space"
     ];
 
-    extraModules = [ "storage_sql" ];
+    extraModules = [ "storage_sql" "websocket" ];
     extraConfig = ''
       storage = "sql"
       sql = { driver = "PostgreSQL", database = "prosody", username = "prosody", password = "", host = "/run/postgresql" }
