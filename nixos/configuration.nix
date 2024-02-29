@@ -31,8 +31,20 @@
     ./programs/yggdrasil.nix
   ];
 
-  # Enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix = {
+    # Enable flakes
+    settings.experimental-features = [ "nix-command" "flakes" ];
+    # Garbage collection
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+    optimise = {
+      automatic = true;
+      dates = [ "03:00" ];
+    };
+  };
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
