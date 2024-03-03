@@ -26,6 +26,8 @@
     ./programs/deluge.nix
     ./programs/prosody.nix
     ./programs/yggdrasil.nix
+
+    ./programs/grafana.nix
   ];
 
   nix = {
