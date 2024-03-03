@@ -18,15 +18,12 @@
     ./programs/synapse.nix
     ./programs/fail2ban.nix
     ./programs/maddy.nix
-    ./programs/plausible.nix
-    ./programs/clickhouse.nix
     ./programs/docker.nix
     ./programs/microboard.nix
     ./programs/freshrss.nix
     ./programs/comfycamp.nix
     ./programs/phoenix.nix
     ./programs/deluge.nix
-    ./programs/adguard.nix
     ./programs/prosody.nix
     ./programs/yggdrasil.nix
   ];

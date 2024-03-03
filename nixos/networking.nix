@@ -11,7 +11,6 @@
       enable = true;
       allowedTCPPorts = [
         22    # SSH
-        53    # adguard
         80    # nginx
         443   # nginx
         25    # smtp inbound
@@ -31,10 +30,8 @@
         6881  # torrents
         16001 # yggdrasil tcp
         16002 # yggdrasil tls
-        55010 # adguard
       ];
       allowedUDPPorts = [
-        53    # adguard
         1900  # jellyfin
         7359  # jellyfin
         6881  # torrents
