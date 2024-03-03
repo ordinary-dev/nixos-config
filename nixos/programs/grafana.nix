@@ -7,6 +7,12 @@
         http_port = 55010;
         domain = "grafana.comfycamp.space";
       };
+      database = {
+        user = "grafana";
+        type = "postgres";
+        name = "grafana";
+        host = "/var/run/postgresql";
+      };
     };
   };
 
