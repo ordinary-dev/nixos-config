@@ -28,6 +28,7 @@
     ./programs/yggdrasil.nix
 
     ./programs/grafana.nix
+    ./programs/prometheus.nix
   ];
 
   nix = {

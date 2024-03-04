@@ -16,11 +16,11 @@
     };
   };
 
-  services.nginx.virtualHosts."grafana.comfycamp.space" = {
+  services.nginx.virtualHosts.${config.services.grafana.settings.server.domain} = {
     useACMEHost = "comfycamp.space";
     forceSSL = true;
     locations."/" = {
-      proxyPass = "http://127.0.0.1:55010";
+      proxyPass = "http://127.0.0.1:${toString config.services.grafana.settings.server.http_port}";
       proxyWebsockets = true;
     };
   };
