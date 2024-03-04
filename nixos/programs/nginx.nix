@@ -16,6 +16,15 @@ in {
     recommendedGzipSettings = true;
     recommendedProxySettings = true;
 
+    appendHttpConfig = ''
+      map $status $loggable {
+          ~^[23]  0;
+          default 1;
+      }
+
+      access_log /var/log/nginx/access.log combined if=$loggable;
+    '';
+
     commonHttpConfig = ''
       # Add HSTS header with preloading to HTTPS requests.
       # Adding this header to HTTP requests is discouraged
