@@ -78,4 +78,31 @@
   systemd.services.mastodon-sidekiq-all = {
     serviceConfig.ReadWritePaths = "/hdd/mastodon-public-system";
   };
+
+  services.nginx.virtualHosts."m.comfycamp.space" = {
+    useACMEHost = "comfycamp.space";
+    forceSSL = true;
+
+    root = "${config.services.mastodon.package}/public/";
+
+    locations = {
+      "/system/" = {
+        alias = "/var/lib/mastodon/public-system/";
+      };
+
+      "/" = {
+        tryFiles = "$uri @proxy";
+      };
+
+      "@proxy" = {
+        proxyPass = "http://unix:/run/mastodon-web/web.socket";
+        proxyWebsockets = true;
+      };
+
+      "/api/v1/streaming/" = {
+        proxyPass = "http://unix:/run/mastodon-streaming/streaming.socket";
+        proxyWebsockets = true;
+      };
+    };
+  };
 }
