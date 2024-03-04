@@ -21,19 +21,32 @@ in {
           database = "matrix-synapse";
         };
       };
+      enable_metrics = true;
       enable_registration = true;
       report_stats = true;
-      listeners = [{
-        bind_addresses = [ "127.0.0.1" ];
-        port = 8008;
-        type = "http";
-        tls = false;
-        x_forwarded = true;
-        resources = [{
-          names = [ "client" "federation" ];
-          compress = false;
-        }];
-      }];
+      listeners = [
+        {
+          bind_addresses = [ "127.0.0.1" ];
+          port = 8008;
+          type = "http";
+          tls = false;
+          x_forwarded = true;
+          resources = [{
+            names = [ "client" "federation" ];
+            compress = false;
+          }];
+        }
+        {
+          bind_addresses = [ "127.0.0.1" ];
+          port = 55013;
+          type = "metrics";
+          tls = false;
+          resources = [{
+            names = [ "metrics" ];
+            compress = false;
+          }];
+        }
+      ];
       signing_key_path = "/var/lib/matrix-synapse/matrix.comfycamp.space.signing.key";
     };
     extraConfigFiles = [

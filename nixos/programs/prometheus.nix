@@ -18,6 +18,13 @@
           targets = [ "127.0.0.1:${toString config.services.prometheus.exporters.node.port}" ];
         }];
       }
+      {
+        job_name = "synapse";
+        metrics_path = "/_synapse/metrics";
+        static_configs = [{
+          targets = [ "127.0.0.1:55013" ];
+        }];
+      }
     ];
   };
 }
