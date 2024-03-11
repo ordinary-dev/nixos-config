@@ -13,4 +13,9 @@
     passwordFile = "/var/lib/secrets/freshrss/password.txt";
     virtualHost = "freshrss.comfycamp.space";
   };
+
+  services.nginx.virtualHosts."freshrss.comfycamp.space" = {
+    useACMEHost = "comfycamp.space";
+    forceSSL = true;
+  };
 }

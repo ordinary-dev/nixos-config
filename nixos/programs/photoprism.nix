@@ -21,4 +21,15 @@
       PHOTOPRISM_DETECT_NSFW = "false";
     };
   };
+
+  services.nginx.virtualHosts."pp.comfycamp.space" = {
+    useACMEHost = "comfycamp.space";
+    forceSSL = true;
+    locations = {
+      "/" = {
+        proxyPass = "http://127.0.0.1:55004";
+        proxyWebsockets = true;
+      };
+    };
+  };
 }

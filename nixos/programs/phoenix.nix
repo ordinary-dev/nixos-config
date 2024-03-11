@@ -12,4 +12,10 @@
       "/var/lib/phoenix:/var/lib/phoenix"
     ];
   };
+
+  services.nginx.virtualHosts."ph.comfycamp.space" = {
+    useACMEHost = "comfycamp.space";
+    forceSSL = true;
+    locations."/".proxyPass = "http://127.0.0.1:55009";
+  };
 }

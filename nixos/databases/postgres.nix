@@ -3,75 +3,70 @@
   config.services.postgresql = {
     enable = true;
     package = pkgs.postgresql_15;
-    ensureDatabases = [ "mastodon" "matrix-synapse" "nextcloud" "maddy" "plausible" "microboard" "freshrss" "prosody" ];
+    ensureDatabases = [
+      "mastodon"
+      "matrix-synapse"
+      "nextcloud"
+      "maddy"
+      "plausible"
+      "microboard"
+      "freshrss"
+      "prosody"
+      "grafana"
+      "postgres-exporter"
+    ];
     ensureUsers = [
       {
         name = "mastodon";
-        ensurePermissions = {
-          "DATABASE mastodon" = "ALL PRIVILEGES";
-        };
+        ensureDBOwnership = true;
         ensureClauses.login = true;
       }
       {
         name = "nextcloud";
-        ensurePermissions = {
-          "DATABASE nextcloud" = "ALL PRIVILEGES";
-        };
+        ensureDBOwnership = true;
         ensureClauses.login = true;
       }
       {
         name = "matrix-synapse";
-        ensurePermissions = {
-          "DATABASE \"matrix-synapse\"" = "ALL PRIVILEGES";
-        };
+        ensureDBOwnership = true;
         ensureClauses.login = true;
       }
       {
         name = "maddy";
-        ensurePermissions = {
-          "DATABASE maddy" = "ALL PRIVILEGES";
-        };
+        ensureDBOwnership = true;
         ensureClauses.login = true;
       }
       {
         name = "plausible";
-        ensurePermissions = {
-          "DATABASE plausible" = "ALL PRIVILEGES";
-        };
+        ensureDBOwnership = true;
         ensureClauses.login = true;
       }
       {
         name = "microboard";
-        ensurePermissions = {
-          "DATABASE microboard" = "ALL PRIVILEGES";
-        };
+        ensureDBOwnership = true;
         ensureClauses.login = true;
       }
       {
         name = "freshrss";
-        ensurePermissions = {
-          "DATABASE freshrss" = "ALL PRIVILEGES";
-        };
+        ensureDBOwnership = true;
         ensureClauses.login = true;
       }
       {
         name = "prosody";
-        ensurePermissions = {
-          "DATABASE prosody" = "ALL PRIVILEGES";
-        };
+        ensureDBOwnership = true;
+        ensureClauses.login = true;
+      }
+      {
+        name = "grafana";
+        ensureDBOwnership = true;
+        ensureClauses.login = true;
+      }
+      {
+        name = "postgres-exporter";
+        ensureDBOwnership = true;
         ensureClauses.login = true;
       }
     ];
-    initialScript = pkgs.writeText "pg-init.sql" ''
-      ALTER DATABASE nextcloud OWNER TO nextcloud;
-      ALTER DATABASE mastodon OWNER TO mastodon;
-      ALTER DATABASE "matrix-synapse" OWNER TO "matrix-synapse";
-      ALTER DATABASE maddy OWNER TO maddy;
-      ALTER DATABASE plausible OWNER TO plausible;
-      ALTER DATABASE microboard OWNER TO microboard;
-      ALTER DATABASE freshrss OWNER TO freshrss;
-      ALTER DATABASE prosody OWNER TO prosody;
-    '';
     identMap = ''
        # ArbitraryMapName systemUser DBUser
        superuser_map      root       postgres

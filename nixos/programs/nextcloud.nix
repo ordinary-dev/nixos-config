@@ -20,4 +20,9 @@
       createLocally = false;
     };
   };
+
+  services.nginx.virtualHosts."nc.comfycamp.space" = {
+    useACMEHost = "comfycamp.space";
+    forceSSL = true;
+  };
 }

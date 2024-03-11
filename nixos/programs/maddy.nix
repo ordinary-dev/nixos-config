@@ -25,4 +25,10 @@
       "driver postgres"
     ] options.services.maddy.config.default;
   };
+
+  services.nginx.virtualHosts."mta-sts.comfycamp.space" = {
+    useACMEHost = "comfycamp.space";
+    forceSSL = true;
+    root = "/var/lib/mta-sts";
+  };
 }

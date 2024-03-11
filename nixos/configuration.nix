@@ -5,15 +5,17 @@
     ./networking.nix
     ./users.nix
     ./time.nix
+
+    ./databases/postgres.nix
+    ./databases/mysql.nix
+    ./databases/redis.nix
+
     ./programs/nginx.nix
     ./programs/bash.nix
     ./programs/acme.nix
-    ./programs/postgres.nix
     ./programs/mastodon.nix
-    ./programs/redis.nix
     ./programs/nextcloud.nix
     ./programs/jellyfin.nix
-    ./programs/mysql.nix
     ./programs/photoprism.nix
     ./programs/synapse.nix
     ./programs/fail2ban.nix
@@ -26,6 +28,9 @@
     ./programs/deluge.nix
     ./programs/prosody.nix
     ./programs/yggdrasil.nix
+
+    ./monitoring/grafana.nix
+    ./monitoring/prometheus.nix
   ];
 
   nix = {

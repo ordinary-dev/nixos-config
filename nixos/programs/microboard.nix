@@ -15,4 +15,14 @@ in
       "/run/postgresql:/run/postgresql"
     ];
   };
+  
+  services.nginx.virtualHosts."0ch.space" = {
+    useACMEHost = "0ch.space";
+    forceSSL = true;
+    locations = {
+      "/" = {
+        proxyPass = "http://127.0.0.1:55006";
+      };
+    };
+  };
 }
