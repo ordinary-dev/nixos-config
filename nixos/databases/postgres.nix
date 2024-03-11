@@ -13,6 +13,7 @@
       "freshrss"
       "prosody"
       "grafana"
+      "postgres-exporter"
     ];
     ensureUsers = [
       {
@@ -57,6 +58,11 @@
       }
       {
         name = "grafana";
+        ensureDBOwnership = true;
+        ensureClauses.login = true;
+      }
+      {
+        name = "postgres-exporter";
         ensureDBOwnership = true;
         ensureClauses.login = true;
       }

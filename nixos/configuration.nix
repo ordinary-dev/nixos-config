@@ -29,8 +29,8 @@
     ./programs/prosody.nix
     ./programs/yggdrasil.nix
 
-    ./programs/grafana.nix
-    ./programs/prometheus.nix
+    ./monitoring/grafana.nix
+    ./monitoring/prometheus.nix
   ];
 
   nix = {

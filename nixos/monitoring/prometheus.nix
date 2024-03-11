@@ -9,6 +9,11 @@
         enabledCollectors = [ "systemd" ];
         port = 55012;
       };
+      postgres = {
+        enable = true;
+        port = 55014;
+        dataSourceName = "user=postgres-exporter database=postgres-exporter host=/run/postgresql sslmode=disable";
+      };
     };
     
     scrapeConfigs = [
@@ -23,6 +28,12 @@
         metrics_path = "/_synapse/metrics";
         static_configs = [{
           targets = [ "127.0.0.1:55013" ];
+        }];
+      }
+      {
+        job_name = "postgres";
+        static_configs = [{
+          targets = [ "127.0.0.1:${toString config.services.prometheus.exporters.postgres.port}" ];
         }];
       }
     ];
