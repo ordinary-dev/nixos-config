@@ -14,6 +14,7 @@
       "prosody"
       "grafana"
       "postgres-exporter"
+      "forgejo"
     ];
     ensureUsers = [
       {
@@ -63,6 +64,11 @@
       }
       {
         name = "postgres-exporter";
+        ensureDBOwnership = true;
+        ensureClauses.login = true;
+      }
+      {
+        name = "forgejo";
         ensureDBOwnership = true;
         ensureClauses.login = true;
       }
