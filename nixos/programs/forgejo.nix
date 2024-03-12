@@ -15,7 +15,7 @@
         PROTOCOL = "smtps";
         SMTP_ADDR = "comfycamp.space";
         SMTP_PORT = 465;
-        USER = "git@comfycamp.space";
+        USER = "forgejo@comfycamp.space";
       };
     };
     mailerPasswordFile = "/var/lib/secrets/forgejo/mail.txt";
