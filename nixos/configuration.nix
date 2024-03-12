@@ -28,6 +28,7 @@
     ./programs/deluge.nix
     ./programs/prosody.nix
     ./programs/yggdrasil.nix
+    ./programs/forgejo.nix
 
     ./monitoring/grafana.nix
     ./monitoring/prometheus.nix
