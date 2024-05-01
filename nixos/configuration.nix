@@ -32,6 +32,8 @@
 
     ./monitoring/grafana.nix
     ./monitoring/prometheus.nix
+
+    ./websites/ss.nix
   ];
 
   nix = {

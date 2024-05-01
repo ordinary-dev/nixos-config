@@ -22,6 +22,8 @@
           default 1;
       }
       access_log /var/log/nginx/access.log combined if=$loggable;
+
+      server_names_hash_bucket_size 128;
     '';
   };
 
