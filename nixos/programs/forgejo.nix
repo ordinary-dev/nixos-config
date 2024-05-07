@@ -18,6 +18,9 @@
         USER = "forgejo@comfycamp.space";
       };
     };
+    lfs = {
+      enable = true;
+    };
     mailerPasswordFile = "/var/lib/secrets/forgejo/mail.txt";
     database = {
       type = "postgres";
