@@ -35,6 +35,7 @@
     ./services/prosody.nix
     ./services/ss.nix
     ./services/synapse.nix
+    ./services/vaultwarden.nix
     ./services/yggdrasil.nix
   ];
 

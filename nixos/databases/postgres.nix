@@ -15,6 +15,7 @@
       "grafana"
       "postgres-exporter"
       "forgejo"
+      "vaultwarden"
     ];
     ensureUsers = [
       {
@@ -69,6 +70,11 @@
       }
       {
         name = "forgejo";
+        ensureDBOwnership = true;
+        ensureClauses.login = true;
+      }
+      {
+        name = "vaultwarden";
         ensureDBOwnership = true;
         ensureClauses.login = true;
       }

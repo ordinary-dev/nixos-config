@@ -11,11 +11,10 @@
           "10.100.0.0/24 allow"
         ];
         local-zone = [
-          "\"comfycamp.lan\" static"
+          "\"vault.comfycamp.space\" static"
         ];
         local-data = [
-          "\"comfycamp.lan IN A 10.100.0.1\""
-          "\"vault.comfycamp.lan IN A 10.100.0.1\""
+          "\"vault.comfycamp.space IN A 10.100.0.1\""
         ];
       };
       forward-zone = [
