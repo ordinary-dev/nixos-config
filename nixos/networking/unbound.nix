@@ -14,8 +14,8 @@
           "\"comfycamp.lan\" static"
         ];
         local-data = [
-          "\"comfycamp.lan IN A 192.168.0.50\""
-          "\"vault.comfycamp.lan IN A 192.168.0.50\""
+          "\"comfycamp.lan IN A 10.100.0.1\""
+          "\"vault.comfycamp.lan IN A 10.100.0.1\""
         ];
       };
       forward-zone = [
