@@ -5,7 +5,7 @@
 
     dhcpcd.enable = true;
     defaultGateway = "192.168.0.1";
-    nameservers = [ "1.1.1.1" ];
+    nameservers = [ "127.0.0.1" ];
 
     firewall = {
       enable = true;
