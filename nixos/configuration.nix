@@ -31,12 +31,12 @@
     ./services/microboard.nix
     ./services/nextcloud.nix
     ./services/phoenix.nix
-    ./services/photoprism.nix
     ./services/prosody.nix
     ./services/ss.nix
     ./services/synapse.nix
     ./services/yggdrasil.nix
     
+    ./private/photoprism.nix
     ./private/vaultwarden.nix
   ];
 
