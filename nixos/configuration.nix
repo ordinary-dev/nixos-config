@@ -30,6 +30,7 @@
     ./services/mastodon.nix
     ./services/microboard.nix
     ./services/nextcloud.nix
+    ./services/openssh.nix
     ./services/phoenix.nix
     ./services/prosody.nix
     ./services/ss.nix
@@ -79,12 +80,6 @@
     pkg-config
     deluged
   ];
-
-  # Enable the OpenSSH daemon.
-  services.openssh = {
-    enable = true;
-    settings.PasswordAuthentication = false;
-  };
 
   powerManagement.powertop.enable = true;
 
