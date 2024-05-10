@@ -35,6 +35,7 @@
         1900  # jellyfin
         7359  # jellyfin
         6881  # torrents
+        51820 # wireguard
       ];
     };
 

@@ -2,9 +2,11 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./networking.nix
     ./users.nix
     ./time.nix
+    
+    ./networking/network.nix
+    ./networking/wireguard.nix
 
     ./databases/postgres.nix
     ./databases/mysql.nix
@@ -13,7 +15,6 @@
     ./programs/acme.nix
     ./programs/bash.nix
     ./programs/docker.nix
-    ./programs/fail2ban.nix
     ./programs/nginx.nix
 
     ./monitoring/grafana.nix
