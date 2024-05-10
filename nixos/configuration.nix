@@ -10,30 +10,30 @@
     ./databases/mysql.nix
     ./databases/redis.nix
 
-    ./programs/nginx.nix
-    ./programs/bash.nix
     ./programs/acme.nix
-    ./programs/mastodon.nix
-    ./programs/nextcloud.nix
-    ./programs/jellyfin.nix
-    ./programs/photoprism.nix
-    ./programs/synapse.nix
-    ./programs/fail2ban.nix
-    ./programs/maddy.nix
+    ./programs/bash.nix
     ./programs/docker.nix
-    ./programs/microboard.nix
-    ./programs/freshrss.nix
-    ./programs/comfycamp.nix
-    ./programs/phoenix.nix
-    ./programs/deluge.nix
-    ./programs/prosody.nix
-    ./programs/yggdrasil.nix
-    ./programs/forgejo.nix
+    ./programs/fail2ban.nix
+    ./programs/nginx.nix
 
     ./monitoring/grafana.nix
     ./monitoring/prometheus.nix
-
-    ./websites/ss.nix
+    
+    ./services/comfycamp.nix
+    ./services/deluge.nix
+    ./services/forgejo.nix
+    ./services/freshrss.nix
+    ./services/jellyfin.nix
+    ./services/maddy.nix
+    ./services/mastodon.nix
+    ./services/microboard.nix
+    ./services/nextcloud.nix
+    ./services/phoenix.nix
+    ./services/photoprism.nix
+    ./services/prosody.nix
+    ./services/ss.nix
+    ./services/synapse.nix
+    ./services/yggdrasil.nix
   ];
 
   nix = {
