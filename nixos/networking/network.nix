@@ -32,6 +32,7 @@
         16002 # yggdrasil tls
       ];
       allowedUDPPorts = [
+        53    # DNS
         1900  # jellyfin
         7359  # jellyfin
         6881  # torrents

@@ -6,6 +6,7 @@
     ./time.nix
     
     ./networking/network.nix
+    ./networking/unbound.nix
     ./networking/wireguard.nix
 
     ./databases/postgres.nix
