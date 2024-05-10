@@ -6,13 +6,12 @@
     environmentFile = "/var/lib/vaultwarden/.env";
     config = {
       DOMAIN = "https://vault.comfycamp.space";
+      LOG_LEVEL = "warn";
 
       DATABASE_URL = "postgresql:///vaultwarden?host=/var/run/postgresql";
 
       ROCKET_ADDRESS = "127.0.0.1";
       ROCKET_PORT = 8222;
-      ROCKET_LOG = "warn";
-
 
       SMTP_HOST = "comfycamp.space";
       SMTP_PORT = 465;
