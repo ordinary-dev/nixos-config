@@ -13,10 +13,12 @@
         local-zone = [
           "\"pp.comfycamp.space\" static"
           "\"vault.comfycamp.space\" static"
+          "\"deluge.comfycamp.space\" static"
         ];
         local-data = [
           "\"pp.comfycamp.space IN A 10.101.0.1\""
           "\"vault.comfycamp.space IN A 10.101.0.1\""
+          "\"deluge.comfycamp.space IN A 10.101.0.1\""
         ];
       };
       forward-zone = [
