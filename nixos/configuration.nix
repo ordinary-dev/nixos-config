@@ -21,6 +21,7 @@
     ./monitoring/grafana.nix
     ./monitoring/prometheus.nix
     
+    ./services/archivebox.nix
     ./services/comfycamp.nix
     ./services/deluge.nix
     ./services/forgejo.nix
