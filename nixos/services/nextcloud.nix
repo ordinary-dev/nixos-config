@@ -2,7 +2,7 @@
 {
   services.nextcloud = {
     enable = true;
-    package = pkgs.nextcloud27;
+    package = pkgs.nextcloud28;
     hostName = "nc.comfycamp.space";
     home = "/hdd/nextcloud";
     config = {
@@ -10,10 +10,12 @@
       dbname = "nextcloud";
       dbuser = "nextcloud";
       dbhost = "/run/postgresql";
-      overwriteProtocol = "https";
-      defaultPhoneRegion = "RU";
       adminuser = "lumin";
       adminpassFile = "/var/lib/secrets/nextcloud/admin-pass.txt";
+    };
+    settings = {
+      overwriteProtocol = "https";
+      defaultPhoneRegion = "RU";
     };
     configureRedis = true;
     database = {
