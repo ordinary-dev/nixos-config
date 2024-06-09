@@ -2,7 +2,7 @@
 {
   services.nextcloud = {
     enable = true;
-    package = pkgs.nextcloud28;
+    package = pkgs.nextcloud29;
     hostName = "nc.comfycamp.space";
     home = "/hdd/nextcloud";
     config = {

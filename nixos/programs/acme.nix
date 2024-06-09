@@ -16,13 +16,6 @@
         dnsPropagationCheck = true;
         credentialsFile = "/var/lib/secrets/cloudflare.txt";
       };
-      "0ch.space" = {
-        dnsProvider = "cloudflare";
-        domain = "0ch.space";
-        extraDomainNames = [ "*.0ch.space" ];
-        dnsPropagationCheck = true;
-        credentialsFile = "/var/lib/secrets/cloudflare.txt";
-      };
     };
   };
 }

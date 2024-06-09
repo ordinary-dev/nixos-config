@@ -16,8 +16,8 @@ in
     ];
   };
   
-  services.nginx.virtualHosts."0ch.space" = {
-    useACMEHost = "0ch.space";
+  services.nginx.virtualHosts."mb.comfycamp.space" = {
+    useACMEHost = "comfycamp.space";
     forceSSL = true;
     locations = {
       "/" = {

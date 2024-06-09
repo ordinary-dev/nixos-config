@@ -2,7 +2,7 @@
 {
   virtualisation.oci-containers.containers.comfycamp = {
     autoStart = true;
-    image = "git.comfycamp.space/lumin/comfycamp:v0.8.2";
+    image = "git.comfycamp.space/lumin/comfycamp:v0.8.3";
     ports = ["55007:80"];
   };
 
