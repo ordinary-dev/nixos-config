@@ -10,5 +10,11 @@
         "forgejo"
       ];
     };
+    listenAddresses = [
+      {
+        addr = "10.101.0.1";
+        port = 22;
+      }
+    ];
   };
 }
