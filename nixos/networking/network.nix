@@ -30,6 +30,8 @@
         6881  # torrents
         16001 # yggdrasil tcp
         16002 # yggdrasil tls
+
+        25565 # minecraft
       ];
       allowedUDPPorts = [
         53    # DNS

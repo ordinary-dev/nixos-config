@@ -30,6 +30,7 @@
     ./services/maddy.nix
     ./services/mastodon.nix
     ./services/microboard.nix
+    ./services/minecraft.nix
     ./services/nextcloud.nix
     ./services/openssh.nix
     ./services/phoenix.nix
