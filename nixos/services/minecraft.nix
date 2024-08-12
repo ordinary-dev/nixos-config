@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
   users.groups = {
     minecraft = {};
@@ -25,4 +25,9 @@
       "/var/lib/minecraft:/data"
     ];
   };
+
+  # Backups.
+  environment.systemPackages = [
+    pkgs.restic
+  ];
 }
