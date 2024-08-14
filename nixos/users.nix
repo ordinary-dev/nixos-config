@@ -46,6 +46,10 @@
       isSystemUser = true;
       group = "phoenix";
     };
+    comfycamp = {
+      isSystemUser = true;
+      group = "comfycamp";
+    };
   };
 
   users.groups = {
@@ -59,5 +63,6 @@
     microboard = {};
     freshrss = {};
     phoenix = {};
+    comfycamp = {};
   };
 }
