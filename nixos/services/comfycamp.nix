@@ -7,7 +7,7 @@
   };
   virtualisation.oci-containers.containers.comfycamp-beta = {
     autoStart = true;
-    image = "git.comfycamp.space/lumin/comfycamp:v1.1.4";
+    image = "git.comfycamp.space/lumin/comfycamp:v1.1.5";
     ports = ["55407:4000"];
     user = "977:971";
     environmentFiles = [
